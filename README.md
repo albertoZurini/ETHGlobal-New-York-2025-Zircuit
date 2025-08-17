@@ -13,7 +13,7 @@ All major protocols are converging on x402-style pay-per-access. Zircuit can own
 
 ## Problem
 
-Captchas frustrate users and are ineffective against agents. Publishers face a binary choice: block all automation or let themselves be botted/farmed. With the rise of agentic browsing, web scraping, and AI traffic, this problem grows daily.
+Captchas frustrate users and are ineffective against agents. As agents start to mediate more of the actions on the web, publishers face a binary choice: block all automation or let themselves be botted/farmed. With the rise of agentic browsing, web scraping, and AI traffic, this problem grows daily.
 
 Existing pay-per-crawl/paywall models (like x402) show market demand but suffer from:
 
