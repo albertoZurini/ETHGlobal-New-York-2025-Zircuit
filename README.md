@@ -1,6 +1,9 @@
 # ETHGlobal-New-Tork-2025 ToolBooth
 
 
-### Our Product
-
-We extended TollBooth to Flow by using the Scheduled Callbacks standard to turn pay-per-access into a recurring subscription model. Content stays gated behind HTTP 402 until callbacks confirm on-chain payments, demonstrating how Flow’s Actions and scheduling primitives can power consumer-grade automation.
+Qualification Requirements
+- A GitHub repository containing the artifacts described above, or links to them.
+- A clear short one-sentence description of your submission, followed by another sentence explaining why you think your team should win.
+- Short description of the team and their backgrounds
+- (Optional) a pitch video or slide deck
+- (Optional) proof-of-concept source code.
