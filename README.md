@@ -81,6 +81,7 @@ Publisher Flow
   * Problem & solution statement
   * Architecture diagram
   * User journeys
+  * Demo site with 402 middleware
   * Why Zircuit: SLS + AA advantage
   * Repo with README + optional diagram
 
@@ -94,7 +95,6 @@ Publisher Flow
 
   * Deploy contracts to Garfield Testnet
   * Verify on Zircuit Explorer
-  * Demo site with 402 middleware
 
 * Milestone 3 (Publisher UX)
 
