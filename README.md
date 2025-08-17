@@ -40,10 +40,29 @@ ToolBooth introduces a Zircuit-native paywall protocol:
 
 ## Why Zircuit
 
-* Sequencer-Level Security (SLS): Zircuit’s AI screens mempool activity, blocking malicious patterns like replayed access attempts or suspicious toll-evasion strategies before inclusion. ToolBooth uniquely benefits from this baseline protection.
-* Account Abstraction / EIP-7702: Enables ephemeral “session wallets” with automatic limits (per-domain, fee caps, timeouts), delivering frictionless UX for agents and safe delegation for users.
-* Scalability & low fees: Internet-scale micropayments become practical with Zircuit’s performance.
+ToolBooth can run on any EVM chain, but it’s a materially better fit on Zircuit because the protocol lines up with what a 402 micropaywall actually needs.
 
+Sequencer-level security stops abuse at the source. Most micropaywalls die from replay and “pay-once, reuse everywhere” attacks. Zircuit screens transactions before they ever land in a block, so patterns like nonce trees, coordinated session churn, and obvious toll-evasion get blocked upstream instead of forcing publishers to play whack-a-mole at the app layer.
+
+ZK batching keeps receipts cheap and sane. A paywall generates tons of tiny payments. Zircuit’s rollup flow lets us batch those into a single settlement per epoch with a Merkle root of paid accesses. Publishers verify inclusion off-chain at line speed and still get on-chain finality—no chain bloat, no death by gas.
+
+Account abstraction makes the UX invisible. Session wallets (7702-style) give agents per-domain spend caps, TTLs, and gas sponsorship. Translation: no wallet pop-ups, no manual signing, and safe delegation for users. That’s the difference between “nice demo” and something agents can actually run 24/7.
+
+Funding is easy, wherever the money sits. Zircuit plays well with common bridges, so facilitators can top up on predictable schedules. Users fund once from the chain they live on; ToolBooth handles the rest. Less friction means more paid requests.
+
+Boring, compatible tooling. It’s EVM. Contracts and middleware deploy with standard stacks, verification lives at the edge, and none of this forces publishers into weird infra or on-chain content schemes.
+
+Right place, right time. x402 is consolidating into a real pattern for “pay for access.” Zircuit adds two things others don’t at the protocol layer: pre-inclusion screening and cheap proof batching. That’s exactly what turns 402 from a slide into a business.
+
+Concrete “Zircuit-only” hooks we’d use
+
+Sequencer policies for passes: Rate-limit repeated jti/nonce trees and flag correlated session churn across domains so bad traffic never settles.
+
+Receipt trees + epoch settlements: One root per epoch instead of thousands of micro-txs; instant off-chain verification, on-chain finality when you need it.
+
+Default to session wallets: Per-route price caps, TTLs, and sponsor gas to keep agent flows uninterrupted and safe.
+
+Bridged balances: Facilitator keeps a Zircuit float and refills from other chains on a timer—no per-request bridging nonsense.
 ---
 
 ## Architecture Overview
