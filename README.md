@@ -3,10 +3,10 @@
 
 # ToolBooth: Zircuit-Native AI-Secured Micropaywalls
 
-Short description
+Short description:
 ToolBooth is an AI-hardened micropaywall protocol that lets websites and publishers charge small fees (via HTTP 402) for bot or agent access. By building on Zircuit, ToolBooth leverages Sequencer-Level Security (SLS) and Account Abstraction (AA) to deliver safer, fraud-resistant payments at internet scale.
 
-Why we should win
+Why we should win:
 All major protocols are converging on x402-style pay-per-access. Zircuit can own this narrative by offering the only version hardened at the sequencer level. ToolBooth creates FOMO: if publishers integrate x402 elsewhere, they’ll miss the unique protections that only Zircuit provides.
 
 ---
